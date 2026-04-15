@@ -84,7 +84,6 @@ nav a:hover {
   font-weight: 400;
   color: var(--muted);
   margin-bottom: 0.75rem;
-  text-align: center;
 }
 
 .hero p {
@@ -92,7 +91,7 @@ nav a:hover {
   font-weight: 300;
   line-height: 1.5;
   max-width: 560px;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .hero p span {
