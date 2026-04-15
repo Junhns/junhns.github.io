@@ -75,6 +75,7 @@ nav a:hover {
   border-bottom: 1px solid var(--border);
   margin-bottom: 4rem;
   animation: fadeUp 0.5s ease both;
+  text-align: center;
 }
 
 .hero h1 {
@@ -83,6 +84,7 @@ nav a:hover {
   font-weight: 400;
   color: var(--muted);
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .hero p {
@@ -90,6 +92,7 @@ nav a:hover {
   font-weight: 300;
   line-height: 1.5;
   max-width: 560px;
+  text-align: center;
 }
 
 .hero p span {
@@ -107,10 +110,8 @@ nav a:hover {
 }
 
 .info-row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 1rem;
-  align-items: baseline;
+  grid-template-columns: 160px 1fr;
+  justify-content: center;
 }
 
 .info-key {
