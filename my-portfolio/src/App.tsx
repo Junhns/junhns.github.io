@@ -1,10 +1,10 @@
 import './App.css'
 
 const info = [
-  { key: 'jun.location', value: '"Richmond Hill, ON"' },
-  { key: 'jun.education', value: '"B.Sc. Computer Science — Toronto Metropolitan University, 2026"' },
-  { key: 'jun.languages', value: '["React", "TypeScript", "Python", "Java", "FastAPI"]' },
-  { key: 'jun.interests', value: '["AI agents", "full-stack", "prompt engineering", "gym"]' },
+  { key: 'jun.location ', value: '"Richmond Hill, ON"' },
+  { key: 'jun.education ', value: '"B.Sc. Computer Science — Toronto Metropolitan University, 2026"' },
+  { key: 'jun.languages ', value: '["React", "TypeScript", "Python", "Java", "FastAPI"]' },
+  { key: 'jun.interests ', value: '["AI agents", "full-stack", "prompt engineering", "gym"]' },
 ]
 
 const projects = [
@@ -56,7 +56,7 @@ export default function App() {
         <div className="hero">
           <h1>// hello</h1>
           <p>
-            I'm <span>Jun Han</span> — a CS grad building{' '}
+            I'm <span>Jun</span> — a CS grad building{' '}
             <span>full-stack</span> and <span>AI-powered</span> apps. Based in Toronto.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function App() {
             </div>
           ))}
           <div className="info-row">
-            <span className="info-key">jun.contact</span>
+            <span className="info-key">jun.contact </span>
             <span className="info-value">
               [&quot;<a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>&quot;,{' '}
               &quot;<a href="https://github.com/Junhns" target="_blank" rel="noreferrer">GitHub</a>&quot;,{' '}
@@ -116,13 +116,13 @@ export default function App() {
           <div className="section-label">contact</div>
           <div className="info">
             <div className="info-row">
-              <span className="info-key">email</span>
+              <span className="info-key">email </span>
               <span className="info-value">
                 <a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>
               </span>
             </div>
             <div className="info-row">
-              <span className="info-key">github</span>
+              <span className="info-key">github </span>
               <span className="info-value">
                 <a href="https://github.com/Junhns" target="_blank" rel="noreferrer">github.com/Junhns</a>
               </span>
