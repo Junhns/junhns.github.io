@@ -1,119 +1,98 @@
 import './App.css'
 
-const skills = [
-  { title: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS', 'Figma', 'Drupal'] },
-  { title: 'Backend & Databases', items: ['Node.js', 'Express.js', 'MongoDB', 'C#', 'PHP', 'Python', 'Java', 'Azure SQL'] },
-  { title: 'Tools & Concepts', items: ['Git', 'Unix', 'Linux', 'OAuth', 'REST APIs', 'Agile', 'Unit Testing', 'SEO'] },
-]
-
-const experience = [
-  {
-    title: 'Software Developer · Environment Canada',
-    date: 'May 2024 – March 2026',
-    tags: ['C#', 'Drupal', 'PHP', 'OAuth', 'REST', 'Agile'],
-    bullets: [
-      'Developed and maintained full-stack web applications using C#, Drupal, and PHP, supporting internal tools and public-facing government platforms.',
-      'Implemented secure authentication systems, including 2FA, OAuth flows, and token-based authorization.',
-      'Designed and integrated RESTful APIs, improving system interoperability and scalability.',
-      'Collaborated in an Agile environment, participating in sprint planning, code reviews, and iterative releases.',
-      'Authored technical documentation for APIs, authentication workflows, and system architecture.',
-      'Troubleshot and optimized performance issues, enhancing application reliability and user experience.',
-    ],
-  },
-  {
-    title: 'E-Commerce Advisor · OCC',
-    date: 'Sept 2023 – Dec 2023',
-    tags: ['UX', 'SEO', 'Responsive', 'Client work'],
-    bullets: [
-      'Designed and developed responsive e-commerce websites for SMEs through the Canadian Digital Adoption Program (CDAP).',
-      'Applied SEO best practices and digital marketing strategies to increase search visibility.',
-      'Improved UI/UX using modern design principles, resulting in more intuitive user journeys.',
-      'Collaborated with clients to gather requirements and deliver customized digital solutions.',
-    ],
-  },
+const info = [
+  { key: 'jun.location', value: '"Richmond Hill, ON"' },
+  { key: 'jun.education', value: '"B.Sc. Computer Science — Toronto Metropolitan University, 2026"' },
+  { key: 'jun.languages', value: '["React", "TypeScript", "Python", "Java", "FastAPI"]' },
+  { key: 'jun.interests', value: '["AI agents", "full-stack", "prompt engineering", "gym"]' },
 ]
 
 const projects = [
   {
-    title: 'Personal Website',
-    date: 'Apr 2023 – Present',
-    tags: ['HTML', 'CSS', 'Responsive Design', 'SEO', 'Inclusive Design'],
-    bullets: [
-      'Built and deployed a responsive portfolio website showcasing photography work with a focus on accessibility and performance.',
-      'Implemented clean UI/UX design principles, including minimalist layouts, typography hierarchy, and whitespace optimization.',
-      'Optimized site performance and discoverability through SEO techniques and semantic HTML structure.',
-      'Continuously iterated on design and features based on user feedback and analytics.',
-    ],
+    title: 'AI Interview Coach',
+    source: 'https://github.com/Junhns/AI-Interviewer',
+    demo: 'https://github.com/Junhns/AI-Interviewer',
+    desc: 'AI-powered mock interview app that conducts structured 5-question interviews tailored to specific companies. Uses an agentic research loop with Claude\'s tool use API to autonomously search for company-specific interview patterns before each session.',
+    tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'Claude API'],
+  },
+  {
+    title: 'VulnScan — Vulnerability Scanner',
+    source: 'https://github.com/Junhns/code-scanner',
+    demo: null,
+    desc: 'Multi-page AI security scanner that analyzes code for vulnerabilities, returning structured JSON with severity ratings and fix suggestions. Includes an interactive attack simulation playground for SQL Injection, XSS, and Broken Authentication.',
+    tags: ['React', 'TypeScript', 'Claude API', 'React Router'],
+  },
+  {
+    title: 'Job Application Agent',
+    source: 'https://github.com/Junhns/job-agent',
+    demo: null,
+    desc: 'Tool-augmented AI agent that autonomously generates tailored job application materials. Uses multi-step prompt engineering workflows — research → synthesis → generation — for consistent, high-quality outputs.',
+    tags: ['Python', 'Claude API', 'Tool Use'],
   },
 ]
 
-function EntryCard({ title, date, tags, bullets }: {
-  title: string
-  date: string
-  tags: string[]
-  bullets: string[]
-}) {
-  return (
-    <div className="card">
-      <div className="entry-header">
-        <div>
-          <h3>{title}</h3>
-          <span className="entry-date">{date}</span>
-        </div>
-        <div className="tags">
-          {tags.map(t => <span key={t} className="tag">{t}</span>)}
-        </div>
-      </div>
-      <ul className="entry-bullets">
-        {bullets.map((b, i) => <li key={i}>{b}</li>)}
-      </ul>
-    </div>
-  )
-}
+const experience = [
+  {
+    title: 'Software Developer (Volunteer) — Sheepgate Church',
+    meta: 'Toronto, ON · In Progress',
+    desc: 'Collaborating as a full stack developer to design and build a REST API inspired by Planning Center. Working with teammates using GitHub — feature branches, pull requests, and code reviews. Built and integrated REST API endpoints using Quarkus and MongoDB.',
+  },
+]
 
 export default function App() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Sang J.</h1>
-          <p>Software Developer | Computer Science | Toronto, ON</p>
-          <div className="hero-links">
-            <a href="https://github.com/" target="_blank">GH</a>
-            <a href="https://linkedin.com/" target="_blank">LI</a>
-            <a href="mailto:you@email.com">@</a>
+      <nav>
+        <span className="logo">jun.han</span>
+        <div className="nav-links">
+          <a href="#projects">projects</a>
+          <a href="#experience">experience</a>
+          <a href="#contact">contact</a>
+        </div>
+      </nav>
+
+      <div className="container">
+
+        <div className="hero">
+          <h1>// hello</h1>
+          <p>
+            I'm <span>Jun Han</span> — a CS grad building{' '}
+            <span>full-stack</span> and <span>AI-powered</span> apps. Based in Toronto.
+          </p>
+        </div>
+
+        <div className="info">
+          {info.map(row => (
+            <div className="info-row" key={row.key}>
+              <span className="info-key">{row.key}</span>
+              <span className="info-value">{row.value}</span>
+            </div>
+          ))}
+          <div className="info-row">
+            <span className="info-key">jun.contact</span>
+            <span className="info-value">
+              [&quot;<a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>&quot;,{' '}
+              &quot;<a href="https://github.com/Junhns" target="_blank" rel="noreferrer">GitHub</a>&quot;,{' '}
+              &quot;<a href="https://linkedin.com/in/jun-han" target="_blank" rel="noreferrer">LinkedIn</a>&quot;]
+            </span>
           </div>
         </div>
-        <button
-          className="scroll-btn"
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          ↓
-        </button>
-      </section>
 
-      <div className="page">
-        <section id="about">
-          <h2 className="section-title">About</h2>
-          <div className="card">
-            <h3>Hi — I'm Sang</h3>
-            <p>Software developer focused on building reliable, accessible web experiences. Outside of software, I love photography — this site doubles as a simple gallery of my work.</p>
-            <div className="about-links">
-              <a href="https://github.com/" target="_blank">GitHub</a>
-              <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-              <a href="mailto:you@email.com">Email</a>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills">
-          <h2 className="section-title">Skills</h2>
-          <div className="skills-grid">
-            {skills.map(group => (
-              <div className="card" key={group.title}>
-                <h3>{group.title}</h3>
-                <div className="tags">
-                  {group.items.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        <section id="projects">
+          <div className="section-label">projects</div>
+          <div className="projects">
+            {projects.map(p => (
+              <div className="project" key={p.title}>
+                <div className="project-header">
+                  <span className="project-title">{p.title}</span>
+                  <div className="project-links">
+                    <a href={p.source} target="_blank" rel="noreferrer">source</a>
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">demo</a>}
+                  </div>
+                </div>
+                <p className="project-desc">{p.desc}</p>
+                <div className="project-tags">
+                  {p.tags.map(t => <span className="tag" key={t}>{t}</span>)}
                 </div>
               </div>
             ))}
@@ -121,38 +100,38 @@ export default function App() {
         </section>
 
         <section id="experience">
-          <h2 className="section-title">Professional Experience</h2>
-          <div className="entries">
-            {experience.map(e => <EntryCard key={e.title} {...e} />)}
+          <div className="section-label">experience</div>
+          <div className="exp-list">
+            {experience.map(e => (
+              <div className="exp" key={e.title}>
+                <div className="exp-title">{e.title}</div>
+                <div className="exp-meta">{e.meta}</div>
+                <p className="exp-desc">{e.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section id="projects">
-          <h2 className="section-title">Projects</h2>
-          <div className="entries">
-            {projects.map(p => <EntryCard key={p.title} {...p} />)}
+        <section id="contact">
+          <div className="section-label">contact</div>
+          <div className="info">
+            <div className="info-row">
+              <span className="info-key">email</span>
+              <span className="info-value">
+                <a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>
+              </span>
+            </div>
+            <div className="info-row">
+              <span className="info-key">github</span>
+              <span className="info-value">
+                <a href="https://github.com/Junhns" target="_blank" rel="noreferrer">github.com/Junhns</a>
+              </span>
+            </div>
           </div>
         </section>
 
-        <section id="education">
-          <h2 className="section-title">Education</h2>
-          <div className="card">
-            <h3>Toronto Metropolitan University</h3>
-            <span className="entry-date">BSc (Hons), Computer Science · Sept 2021 – Apr 2026</span>
-          </div>
-        </section>
+        <footer>built by jun han · 2026</footer>
 
-        <section id="extracurriculars">
-          <h2 className="section-title">Extracurriculars</h2>
-          <div className="card">
-            <h3>TMU Computer Science Course Union — VP Student Life</h3>
-            <span className="entry-date">June 2022 – May 2025</span>
-            <ul className="entry-bullets" style={{ marginTop: '0.75rem' }}>
-              <li>Organized and executed academic and social events for a community of 2,000+ students.</li>
-              <li>Led cross-functional teams to improve student engagement and campus experience.</li>
-            </ul>
-          </div>
-        </section>
       </div>
     </>
   )
