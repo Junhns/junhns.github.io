@@ -1,7 +1,7 @@
 import './App.css'
 
 const info = [
-  { key: 'jun.location ', value: '"Richmond Hill, ON"' },
+  { key: 'jun.location ', value: '"Toronto, ON"' },
   { key: 'jun.education ', value: '"B.Sc. Computer Science — Toronto Metropolitan University, 2026"' },
   { key: 'jun.languages ', value: '["React", "TypeScript", "Python", "Java", "FastAPI"]' },
   { key: 'jun.interests ', value: '["AI agents", "full-stack", "prompt engineering"]' },
