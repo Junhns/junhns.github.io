@@ -73,7 +73,7 @@ export default function App() {
             <span className="info-value">
               [&quot;<a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>&quot;,{' '}
               &quot;<a href="https://github.com/Junhns" target="_blank" rel="noreferrer">GitHub</a>&quot;,{' '}
-              &quot;<a href="https://linkedin.com/in/jun-han" target="_blank" rel="noreferrer">LinkedIn</a>&quot;]
+              &quot;<a href="https://www.linkedin.com/in/junhns/" target="_blank" rel="noreferrer">LinkedIn</a>&quot;]
             </span>
           </div>
         </div>
