@@ -109,6 +109,7 @@ nav a:hover {
 }
 
 .info-row {
+  display: grid;
   grid-template-columns: 160px 1fr;
   justify-content: center;
 }
