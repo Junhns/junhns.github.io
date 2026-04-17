@@ -3,38 +3,36 @@ import './App.css'
 const info = [
   { key: 'jun.location ', value: '"Toronto, ON"' },
   { key: 'jun.education ', value: '"B.Sc. Computer Science — Toronto Metropolitan University, 2026"' },
-  { key: 'jun.languages ', value: '["React", "TypeScript", "Python", "Java", "FastAPI"]' },
+  { key: 'jun.languages ', value: '["Python", "TypeScript", "Elixir", "Java", "JavaScript", "Rust", "CSS", "Prolog", "Haskell", "Lua"]' },
+  { key: 'jun.tech ', value: '["Claude API", "React", "Vite", "Quarkus", "Tailwind", "FastAPI", "Firebase", "SQL", "MongoDB", "BeautifulSoup", "Git", "Github"]' },
   { key: 'jun.interests ', value: '["AI agents", "full-stack", "prompt engineering"]' },
 ]
 
 const projects = [
   {
-    title: 'AI Interview Coach',
-    source: 'https://github.com/Junhns/AI-Interviewer',
-    demo: 'https://github.com/Junhns/AI-Interviewer',
-    desc: 'AI-powered mock interview app that conducts structured 5-question interviews tailored to specific companies. Uses an agentic research loop with Claude\'s tool use API to autonomously search for company-specific interview patterns before each session.',
-    tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'Claude API'],
+    title: 'Job Application Agent',
+    source: 'https://github.com/Junhns/job-agent',
+    desc: 'Tool-augmented AI agent that autonomously generates tailored job application materials. Uses multi-step prompt engineering workflows — research → synthesis → generation — for consistent, high-quality outputs.',
+    tags: ['Python', 'Claude API', 'Tool Use'],
   },
   {
-    title: 'VulnScan — Vulnerability Scanner',
+    title: 'VulnScan — Code Scanner',
     source: 'https://github.com/Junhns/code-scanner',
-    demo: null,
     desc: 'Multi-page AI security scanner that analyzes code for vulnerabilities, returning structured JSON with severity ratings and fix suggestions. Includes an interactive attack simulation playground for SQL Injection, XSS, and Broken Authentication.',
     tags: ['React', 'TypeScript', 'Claude API', 'React Router'],
   },
   {
-    title: 'Job Application Agent',
-    source: 'https://github.com/Junhns/job-agent',
-    demo: null,
-    desc: 'Tool-augmented AI agent that autonomously generates tailored job application materials. Uses multi-step prompt engineering workflows — research → synthesis → generation — for consistent, high-quality outputs.',
-    tags: ['Python', 'Claude API', 'Tool Use'],
+    title: 'AI Interview Coach',
+    source: 'https://github.com/Junhns/AI-Interviewer',
+    desc: 'AI-powered mock interview app that conducts structured 5-question interviews tailored to specific companies. Uses an agentic research loop with Claude\'s tool use API to autonomously search for company-specific interview patterns before each session.',
+    tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'Claude API'],
   },
 ]
 
 const experience = [
   {
-    title: 'Software Developer (Volunteer) — Sheepgate Church',
-    meta: 'Toronto, ON · In Progress',
+    title: 'Software Developer — Sheepgate Church',
+    meta: 'April 2025 - Present',
     desc: 'Collaborating as a full stack developer to design and build a REST API inspired by Planning Center. Working with teammates using GitHub — feature branches, pull requests, and code reviews. Built and integrated REST API endpoints using Quarkus and MongoDB.',
   },
 ]
@@ -68,14 +66,6 @@ export default function App() {
               <span className="info-value">{row.value}</span>
             </div>
           ))}
-          <div className="info-row">
-            <span className="info-key">jun.contact </span>
-            <span className="info-value">
-              [&quot;<a href="mailto:junhn1105@gmail.com">junhn1105@gmail.com</a>&quot;,{' '}
-              &quot;<a href="https://github.com/Junhns" target="_blank" rel="noreferrer">GitHub</a>&quot;,{' '}
-              &quot;<a href="https://www.linkedin.com/in/junhns/" target="_blank" rel="noreferrer">LinkedIn</a>&quot;]
-            </span>
-          </div>
         </div>
 
         <section id="projects">
@@ -87,7 +77,6 @@ export default function App() {
                   <span className="project-title">{p.title}</span>
                   <div className="project-links">
                     <a href={p.source} target="_blank" rel="noreferrer">source</a>
-                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">demo</a>}
                   </div>
                 </div>
                 <p className="project-desc">{p.desc}</p>
@@ -125,6 +114,12 @@ export default function App() {
               <span className="info-key">github </span>
               <span className="info-value">
                 <a href="https://github.com/Junhns" target="_blank" rel="noreferrer">github.com/Junhns</a>
+              </span>
+            </div>
+            <div className="info-row">
+              <span className="info-key">LinkedIn </span>
+              <span className="info-value">
+                <a href="https://www.linkedin.com/in/junhns/">junhs</a>
               </span>
             </div>
           </div>
