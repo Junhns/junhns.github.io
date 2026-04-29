@@ -16,6 +16,12 @@ const projects = [
     tags: ['Python', 'Claude API', 'Tool Use'],
   },
   {
+  title: 'SteamCompletionist',
+  source: 'https://github.com/Junhns/steamcompletionist',
+  desc: 'Always-on-top Steam achievement overlay that fetches your library and shows missing achievements sorted by easiest first. Color coded difficulty, personality reactions for rare achievements, and a built-in game search.',
+  tags: ['Python', 'tkinter', 'Steam API', 'requests'],
+  },
+  {
     title: 'VulnScan — Code Scanner',
     source: 'https://github.com/Junhns/code-scanner',
     desc: 'Multi-page AI security scanner that analyzes code for vulnerabilities, returning structured JSON with severity ratings and fix suggestions. Includes an interactive attack simulation playground for SQL Injection, XSS, and Broken Authentication.',
