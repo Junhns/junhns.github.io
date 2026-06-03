@@ -33,6 +33,12 @@ const projects = [
     desc: 'AI-powered mock interview app that conducts structured 5-question interviews tailored to specific companies. Uses an agentic research loop with Claude\'s tool use API to autonomously search for company-specific interview patterns before each session.',
     tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'Claude API'],
   },
+  {
+  title: 'Netflix Content Analysis',
+  source: 'https://github.com/Junhns/netflix-analysis',
+  desc: 'Analyzed 8,800+ Netflix titles using SQLite and Python to uncover content strategy patterns across 10 countries and 13 years of data. Identified regional trends including India\'s movie dominance and East Asia\'s focus on episodic content.',
+  tags: ['Python', 'SQLite', 'pandas', 'matplotlib', 'seaborn', 'SQL'],
+  }
 ]
 
 const experience = [
